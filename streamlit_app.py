@@ -4,6 +4,9 @@ import math
 import pandas as pd
 import streamlit as st
 
+import os
+import openai
+
 """
 # Hello World!
 
@@ -13,6 +16,18 @@ This is Ariana and Tanya's low-code webapp experiment
 
 Peace and love
 """
+
+openai.api_key = os.getenv("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")
+
+response = openai.Completion.create(
+  model="text-davinci-003",
+  prompt="Create an outline for an essay about Nikola Tesla and his contributions to technology:",
+  temperature=0.3,
+  max_tokens=150,
+  top_p=1.0,
+  frequency_penalty=0.0,
+  presence_penalty=0.0
+)
 
 
 # with st.echo(code_location='below'):
