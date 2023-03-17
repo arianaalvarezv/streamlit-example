@@ -4,8 +4,8 @@ import math
 import pandas as pd
 import streamlit as st
 
-import os
-import openai
+# import os
+# import openai
 
 """
 # Hello World!
